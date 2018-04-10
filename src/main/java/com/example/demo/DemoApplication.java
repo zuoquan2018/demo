@@ -8,17 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@SpringBootApplication
-public class DemoApplication {
-	@Autowired
-	private BookBean bookBean;
+	@SpringBootApplication
+	public class DemoApplication {
+		@Autowired
+		private BookBean bookBean;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-
-//		SpringApplicationBuilder builder = new SpringApplicationBuilder(DemoApplication.class);
-//		//修改Banner的模式为OFF
-//		builder.bannerMode(Banner.Mode.OFF).run(args);
 	}
 
 
@@ -27,6 +23,4 @@ public class DemoApplication {
 
 		return "Hello Spring Boot!"+"作者："+bookBean.getAuthor();
 	}
-
-
 }
